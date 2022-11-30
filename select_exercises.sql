@@ -1,7 +1,13 @@
 USE codeup_test_db;
+SELECT 'Pink Floyd albums:' AS 'Info';
 SELECT name FROM albums WHERE artist = 'Pink Floyd';
+SELECT 'Sgt. Pepper''s Lonely Hearts Club Band release date' AS 'Info';
 SELECT release_date FROM albums WHERE name = 'Sgt. Pepper''s Lonely Hearts Club Band';
+SELECT 'Genre of Nevermind:' AS 'Info';
 SELECT genre FROM albums WHERE name = 'Nevermind';
+SELECT 'Albums of the 90s:' AS 'Info';
 SELECT name FROM albums WHERE release_date BETWEEN 1989 AND 2000;
+SELECT 'Sold less than 20 million:' AS 'Info';
 SELECT name FROM albums WHERE sales < 20;
+SELECT 'Rock albums:' AS 'Info';
 SELECT name FROM albums WHERE genre = 'Rock';
