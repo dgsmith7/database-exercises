@@ -38,9 +38,9 @@ USE employees;
 -- ORDER BY d.dept_name;
 
 SELECT CONCAT(e.first_name, ' ', e.last_name) AS 'Employee', d.dept_name AS 'Department Name',  CONCAT(e2.first_name, ' ', e2.last_name) AS 'Department Manager'
-FROM employees AS e
-         JOIN current_dept_emp AS cde
-              ON e.emp_no = cde.emp_no
+FROM current_dept_emp AS cde
+         JOIN employees AS e
+              ON cde.emp_no = e.emp_no
          JOIN departments AS d
             ON cde.dept_no = d.dept_no
          JOIN dept_manager AS dm
